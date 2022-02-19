@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2, 
+    "name": "Edoc",
+	"description": "Поиск в Edoclib",
+    "version": "1.0",
+	
+	"browser_action": {			  			
+			"default_title": "Поиск в Edoclib",
+			"default_icon":"images/image.png",
+			"default_popup": "popup/popup.html"
+	},	
+	
+    "permissions": ["storage", "tabs", "http://serv-iis:8089/Pages/Search.aspx"],
+
+    "icons": {
+            "16": "images/image.png",
+            "32": "images/image.png",
+            "48": "images/image.png",
+            "64": "images/image.png",
+            "128": "images/image.png"
+    },
+    "background": {
+		"scripts": ["content_scripts/background.js"]
+	}
+}
